@@ -1,0 +1,75 @@
+.sword {
+    background-color: blue;
+    color: white;
+}
+
+.bowAndArrow {
+    background-color: brown;
+    color: white;
+}
+
+.food {
+    background-color: orange;
+    color: white;
+}
+
+.water {
+    background-color: aqua;
+    color: white;
+}
+
+.money {
+    background-color: green;
+    color: white;
+}
+
+.potion {
+    background-color: purple;
+    color: white;
+}
+
+.elixir {
+    background-color: greenyellow;
+    color: white;
+}
+
+.clothing {
+    background-color: darkcyan;
+    color: white;
+}
+
+.armour {
+    background-color: gray;
+    color: white;
+}
+
+.pokeball {
+    background-color: red;
+    color: white;
+
+}
+
+.baseballbat {
+    background-color: burlywood;
+    color: white;
+}
+
+.diamond {
+    background-color: aquamarine;
+    color: white;
+}
+
+.open {
+    background-color: green;
+    color: white;
+}
+
+.close {
+    background-color: red;
+    color: white;
+}
+
+.empty {
+    background-color: black;
+    color: white;
+}

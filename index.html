@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Filler</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!--
+Teamoppgave: Inventory Filler
+
+    Must have:
+flytting av items til inventory
+et inventory område
+items som vi skal kunne trykke å flytte til inventory
+kunne lagre items i inventoriet
+åpne og lukke inventory
+
+
+Nice to have:
+return function (???)
+css farger og lignende (utseende)
+evt. tømme inventory å sette itemsa ute igjen
+-->
+
+<body style="background-color: lightgray">
+
+    <!-- Pen Overskrift -->
+    <h1>Items</h1>
+
+    <!-- Knapper som kaller på addItems(), og i parametre har tekst som vi skal lege til variablen inventory -->
+    <button class="sword" onclick="addItems('<div>Sword</div>')">Sword</button>
+    <button class="bowAndArrow" onclick="addItems('<div>Bow & Arrow</div>')">Bow & Arrow</button>
+    <button class="food" onclick="addItems('<div>Food</div>')">Food</button>
+    <button class="water" onclick="addItems('<div>Water</div>')">Water</button>
+    <button class="money" onclick="addItems('<div>Money</div>')">Money</button>
+    <button class="potion" onclick="addItems('<div>Potion</div>')">Potion</button>
+    <br />
+    <button class="elixir" onclick="addItems('<div>Elixir</div>')">Elixir</button>
+    <button class="clothing" onclick="addItems('<div>Clothing</div>')">Clothing</button>
+    <button class="armour" onclick="addItems('<div>Armour</div>')">Armour</button>
+    <button class="pokeball" onclick="addItems('<div>Pokéball</div>')">Pokéball</button>
+    <button class="baseballbat" onclick="addItems('<div>Baseball Bat</div>')">Baseball Bat</button>
+    <button class="diamond" onclick="addItems('<div>Diamond</div>')">Diamond</button>
+
+    <br />
+    <br />
+
+    <!-- Pen Overskrift -->
+    <h1>Inventory</h1>
+
+    <!-- Div-en vi endrer til å vise alle itemsa våre -->
+    <div style="border: 3px solid pink; background-color: aliceblue;" id="inventoryCard"></div>
+
+    <br />
+    <!-- Knapp som kaller på ShowItems(), som viser items i inventory diven -->
+    <button class="open" onclick="showItems()">Show Inventory</button>
+
+    <!-- Knapp som kaller på closeInventory(), som "lukker" inventory diven -->
+    <button class="close" onclick="closeInventory()">Close Inventory</button>
+
+    <!-- Knapp som kaller på emptyInventory(), som setter variablen inventory til [](null) og 
+    så kaller showItems som viser at det ikke er noen items der lenger -->
+    <button class="empty" onclick="emptyInventory()">Empty Inventory</button>
+
+    <script>
+        // Holder på teksten vår, som vi kan vise den senere
+        var inventory = '';
+
+        // Setter innerHtml til variablen inventory
+        function showItems() {
+            document.getElementById('inventoryCard').innerHTML = inventory;
+        }
+
+        // Adder tekst til variablen inventory
+        function addItems(Item) {
+            inventory += Item;
+        }
+
+        // Setter innerHTMl-en til [](null)
+        function closeInventory() {
+            document.getElementById('inventoryCard').innerHTML = [];
+        }
+
+        // Setter variablen inventory til [](null) og kaller på funksjonen showitems();
+        function emptyInventory() {
+            inventory = [];
+            showItems();
+        }
+
+    </script>
+
+</body>
+
+</html>

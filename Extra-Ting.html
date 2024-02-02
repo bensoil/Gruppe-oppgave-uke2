@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="fisk" onclick="pushItems('banan')">banan</button>
+    <button id="banan" onclick="pushItems('fisk')">fisk</button>
+
+    <script>
+
+        function showItems2() {
+            // Setter innerHtml til inventory
+            document.getElementById('Inventorycard').innerHTML = Showinventory();
+        }
+
+        function Showinventory() {
+            return inventory;
+        }
+
+        function showSword123(item) {
+            inventory += item;
+        }
+
+
+        function showBowAndArrow() {
+            inventory += ' BowAndArrow';
+        }
+
+        function showFood() {
+            inventory += ' Food';
+        }
+
+        function showWater() {
+            inventory += ' Water';
+        }
+
+        function showMoney() {
+            inventory += ' Money';
+        }
+
+
+        // Array:
+
+        const Bag = ["Money", "Water"];
+        let itemToInventory;
+
+        function pushItems(itemToInventory) {
+            Bag.push(itemToInventory)
+            document.getElementById('Inventorycard').innerHTML = Bag;
+        }
+
+    </script>
+</body>
+
+</html>
